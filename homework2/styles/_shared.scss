@@ -1,0 +1,99 @@
+@import "_variables-mixins.scss";
+html {
+  font-size: 62.5%;
+}
+
+main {
+  width: 117.178rem;
+  margin: 0 auto;
+  padding: 10rem 0 0 0;
+
+  .alert-text {
+    @include alert-text;
+    margin-bottom: 5rem;
+  }
+
+  .description {
+    @include description;
+  }
+
+  .main-div {
+    display: grid;
+    column-gap: 3rem;
+    row-gap: 2.8rem;
+    grid-template-columns: 1fr 1fr;
+
+    .heading-sm-p {
+      @include heading-sm-p;
+      margin-bottom: 1.5rem;
+    }
+
+    .main-div-child {
+      @include flex;
+
+      &:nth-child(1) {
+        @include maind-div-child(#FFC12D)
+      }
+
+      &:nth-child(2) {
+        @include maind-div-child(#A7EC2F)
+      }
+
+      &:nth-child(3) {
+        @include maind-div-child(#FEB1A4)
+      }
+
+      &:nth-child(4) {
+        @include maind-div-child(#85EBFA)
+      }
+
+      &:nth-child(5) {
+        @include maind-div-child(#AACDF6)
+      }
+
+      .icon-exclamation {
+        @include circle(#f9b718, transparent);
+      }
+
+      .icon-checkmark {
+        @include circle(#7bc200, transparent);
+      }
+
+      .icon-nah {
+        @include circle(#f55c43, transparent);
+      }
+
+      .icon-thunder {
+        @include circle(#47b4f6, transparent);
+      }
+
+      .icon-i {
+        @include circle(#8781bd, transparent);
+      }
+
+      .cancel-1 {
+        @include cancel (invert(10%) sepia(50%) saturate(5268%) hue-rotate(245deg) brightness(70%) contrast(100%))
+      }
+
+      .cancel-2 {
+        @include cancel (invert(26%) sepia(89%) saturate(1583%) hue-rotate(95deg) brightness(60%) contrast(106%))
+      }
+
+      .cancel-3 {
+        @include cancel (invert(16%) sepia(99%) saturate(7404%) hue-rotate(4deg) brightness(95%) contrast(118%))
+      }
+
+      .cancel-4 {
+        @include cancel (invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%))
+      }
+
+      .cancel-5 {
+        @include cancel (invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(50%) contrast(115%))
+      }
+    }
+
+    .main-div-child:last-child {
+      grid-column: 1 / span 2;
+    }
+  }
+}

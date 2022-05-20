@@ -1,0 +1,62 @@
+$display-flex: flex;
+$display-flex-gap: 3rem;
+$display-flex-align-items: center;
+$display-flex-justify-conter: center;
+
+@mixin flex {
+  display: $display-flex;
+  gap: $display-flex-gap;
+  align-items: $display-flex-align-items;
+}
+
+$heading-font-family: "Lato light", sans-serif;
+$heading-font-size: 3rem;
+$heading-color: #2c3e50;
+
+@mixin alert-text {
+  font-family: $heading-font-family;
+  font-size: $heading-font-size;
+  color: $heading-color;
+}
+
+$heding-sm-font-family: "Lato", sans-serif;
+$heading-sm-font-size: 1.4rem;
+$heading-sm-color: #2c3e50;
+$heading-sm-letter-spacing: 0.13rem;
+
+@mixin heading-sm-p {
+  font-family: $heding-sm-font-family;
+  font-size: $heading-sm-font-size;
+  color: $heading-sm-color;
+  letter-spacing: $heading-sm-letter-spacing;
+}
+
+$description-font-family: "Lato black", sans-serif;
+$description-font-size: 1.4rem;
+$description-color: #a1b1bc;
+$description-line-height: 171.4%;
+
+@mixin description {
+  font-family: $description-font-family;
+  font-size: $description-font-size;
+  color: $description-color;
+  line-height: $description-line-height;
+}
+
+$circle-width: 5rem;
+$circle-height: 5rem;
+$circle-border: 0.7rem;
+$circle-broder-radius: 50%;
+$circle-flex-shrink: 0;
+
+@mixin circle($circle-color, $circle-bg-color) {
+  width: $circle-width;
+  height: $circle-height;
+  border: $circle-border solid $circle-color;
+  border-radius: $circle-broder-radius;
+  background-color: $circle-bg-color;
+  flex-shrink: $circle-flex-shrink;
+  display: $display-flex;
+  align-items: $display-flex-align-items;
+  justify-content: $display-flex-justify-conter;
+}
